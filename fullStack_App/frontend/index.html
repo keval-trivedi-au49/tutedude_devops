@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body>
+    <h1>User Form</h1>
+    {% if error %}
+        <p style="color: red;">
+            {{ error }}
+        </p>
+    {% endif %}
+    <form action="/submit" method="POST">
+        <div>
+            <label>Name:</label>
+            <input type="text" name="name">
+        </div>
+        <br>
+        <div>
+            <label>Email:</label>
+            <input type="email" name="email">
+        </div>
+        <br>
+        <button type="submit">
+            Submit
+        </button>
+    </form>
+</body>
+</html>
